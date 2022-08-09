@@ -11,9 +11,6 @@
 // USER STORY 3: When a user fills out the form,
 // the information is reflected in the input fields
 
-// In the beforeEach, I am stubbing the network request and returning
-// a fixture to match the single url that exists on load
-
 describe('Iteration 3', () => {
   
   beforeEach(() => {
@@ -33,4 +30,12 @@ describe('Iteration 3', () => {
     cy.get('[data-cy="url-input"]').invoke('attr', 'placeholder').should('contain', 'URL')
     cy.get('[data-cy="submit-button"]').contains('Shorten Please')
   })
+
+  it('Should pass User Story 3', () => {
+    cy.get('[data-cy="title-input"]').type('Travis')
+    cy.get('[data-cy="url-input"]').type('Travis.com/TravisKalikoze/SuperCoolPage')
+    cy.get('[data-cy="title-input"]').invoke('attr', 'value').should('contain', 'Travis')
+    cy.get('[data-cy="url-input"]').invoke('attr', 'value').should('contain', 'Travis.com/TravisKalikoze/SuperCoolPage')
+  })
+
 })
