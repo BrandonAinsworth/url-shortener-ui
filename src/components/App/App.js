@@ -30,16 +30,15 @@ export class App extends Component {
 
   componentDidUpdate() {
     if (this.state.checkBool) {
-    getUrls()
-    .then(data => {
-      this.setState({
-        urls: data.urls,
-        checkBool: false
+      getUrls()
+      .then(data => {
+        this.setState({
+          urls: data.urls,
+          checkBool: false
+        })
       })
-    })
   }
   }
-
 
   render() {
     return (
@@ -48,7 +47,6 @@ export class App extends Component {
           <h1 data-cy="page-title" >URL Shortener</h1>
           <UrlForm boolChanger={this.boolChanger}/>
         </header>
-
         <UrlContainer urls={this.state.urls}/>
       </main>
     );

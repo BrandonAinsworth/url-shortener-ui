@@ -2,7 +2,6 @@
 // Since they are kind of long for the it block, 
 // I figured I'd make it easy and label them
 
-
 // USER STORY 1: When a user visits the page, 
 // they can view the page title and the existing shortened URLs
 

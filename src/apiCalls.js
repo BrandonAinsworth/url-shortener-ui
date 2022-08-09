@@ -3,7 +3,6 @@ export const getUrls = () => {
       .then(response => response.json())
 }
 
-
 export const postUrls = (long, title) => {
    fetch('http://localhost:3001/api/v1/urls', {
     method: 'POST',

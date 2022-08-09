@@ -1,7 +1,6 @@
 // COMMENTS: For uniformity
 // USER STORY 1: When a user fills out and submits the form, the new shortened URL is rendered
 
-
 describe('Iteration 4', () => {
   
   beforeEach(() => {
@@ -19,4 +18,5 @@ describe('Iteration 4', () => {
     cy.get(':nth-child(2) > [data-cy="long"]').contains('ScottizrllyKool.com/VoteToMakeScottsdaleMine')
     cy.get(':nth-child(2) > [data-cy="short"]').contains('http://localhost:3001/useshorturl/2')
   })
+  
 })
