@@ -14,14 +14,12 @@ export class App extends Component {
   }
 
   boolChanger = () => {
-    console.log('boolin')
     this.setState({
       checkBool: true
     })
   }
 
   componentDidMount() {
-    console.log('Hello but once')
     getUrls()
     .then(data => {
       this.setState({
@@ -31,16 +29,13 @@ export class App extends Component {
   }
 
   componentDidUpdate() {
-    console.log('Hello')
     if (this.state.checkBool) {
-      console.log('ARE YOU RUNNING')
     getUrls()
     .then(data => {
       this.setState({
         urls: data.urls,
         checkBool: false
       })
-      console.log('SHOULD UPDATE NOW')
     })
   }
   }
