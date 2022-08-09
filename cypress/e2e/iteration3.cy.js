@@ -27,4 +27,10 @@ describe('Iteration 3', () => {
     cy.get('[data-cy="short"]').contains('http://localhost:3001/useshorturl/1')
     cy.get('[data-cy="long"]').contains('https://images.unsplash.com/photo-1531898418865-480b7090470f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')
   })
+
+  it('Should pass User Story 2', () => {
+    cy.get('[data-cy="title-input"]').invoke('attr', 'placeholder').should('contain', 'Title')
+    cy.get('[data-cy="url-input"]').invoke('attr', 'placeholder').should('contain', 'URL')
+    cy.get('[data-cy="submit-button"]').contains('Shorten Please')
+  })
 })
