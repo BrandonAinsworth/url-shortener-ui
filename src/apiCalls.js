@@ -5,8 +5,6 @@ export const getUrls = () => {
 
 
 export const postUrls = (long, title) => {
-  console.log('long',long)
-  console.log('title',title)
    fetch('http://localhost:3001/api/v1/urls', {
     method: 'POST',
     headers: {
