@@ -17,7 +17,7 @@
 describe('Iteration 3', () => {
   
   beforeEach(() => {
-    cy.intercept('GET', 'http://localhost:3001/api/v1/urls', { fixture: 'url'})
+    cy.intercept('GET','http://localhost:3001/api/v1/urls', { fixture: 'url'})
     cy.visit('http://localhost:3000/')
   })
   
